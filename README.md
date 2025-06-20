@@ -56,7 +56,7 @@ nodemon server.js
 
 ### 5 - Acesse a aplicação:
 
-Abrindo na porta padrão que o React usa: <http://localhost:5000/> em seu navegador.
+Abrindo na porta padrão que usa: <http://localhost:5000/> em seu navegador.
 
   </details>
 <br />
@@ -68,10 +68,18 @@ Abrindo na porta padrão que o React usa: <http://localhost:5000/> em seu navega
 
 
 ## 📌 Funcionalidades
-[GET] /saudacao
+* [GET] /saudacao
 Retorna uma mensagem de boas-vindas.
 
-[POST] /usuarios
+* [POST] /usuarios
 Adiciona um novo usuário ao sistema.
 Campos obrigatórios: nome, email
+
+
+## 🛠️ Melhorias Futuras
+* Adicionar rotas para listar todos os usuários.
+
+* Implementar atualização e remoção de usuários.
+
+* Implementar validações mais robustas.
 

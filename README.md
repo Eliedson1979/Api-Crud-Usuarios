@@ -85,9 +85,11 @@ Atualização de dados de um usuário existente
 Remoção de um usuário
 
 ## 🛠️ Melhorias Futuras
-* Adicionar rotas para listar todos os usuários.
+* Uso de banco de dados real (MongoDB, PostgreSQL etc.)
 
-* Implementar atualização e remoção de usuários.
+* Organização do código em camadas (MVC).
 
 * Implementar validações mais robustas.
+
+* Inclusão de autenticação e segurança.
 

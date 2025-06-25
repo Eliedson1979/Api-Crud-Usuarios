@@ -75,6 +75,14 @@ Retorna uma mensagem de boas-vindas.
 Adiciona um novo usuário ao sistema.
 Campos obrigatórios: nome, email
 
+* [GET] /usuarios
+Listagem de todos os usuários
+
+* [PUT] /usuarios/:id
+Atualização de dados de um usuário existente
+
+* [DELETE] /usuarios/:id
+Remoção de um usuário
 
 ## 🛠️ Melhorias Futuras
 * Adicionar rotas para listar todos os usuários.

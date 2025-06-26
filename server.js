@@ -1,7 +1,10 @@
 const express = require("express");
+const cors = require("cors"); // ✅ Importa o CORS
+
 const app = express();
 const port = 5000;
 
+app.use(cors()); // ✅ Ativa o CORS para todas as rotas
 app.use(express.json());
 
 let usuarios = [];

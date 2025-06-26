@@ -4,17 +4,20 @@ const cors = require("cors"); // ✅ Importa o CORS
 const app = express();
 const port = 5000;
 
+// Middleware para interpretar JSON no corpo das requisições
 app.use(cors()); // ✅ Ativa o CORS para todas as rotas
 app.use(express.json());
 
+// Array em memória para armazenar os usuários
 let usuarios = [];
 let idAtual = 1;
 
+// Rota GET /saudacao
 app.get('/saudacao', (req, res) => {
   res.json({ mensagem: 'Bem-vindo à API de exemplos' });
 });
 
-// POST - Criar usuário
+// Rota POST - Criar usuário
 app.post('/usuarios', (req, res) => {
   try {
     const { nome, email } = req.body;
@@ -37,7 +40,7 @@ app.post('/usuarios', (req, res) => {
   }
 });
 
-// GET - Listar usuários
+// Rota GET - Listar usuários
 app.get('/usuarios', (req, res) => {
   try {
     res.json(usuarios);
@@ -46,7 +49,7 @@ app.get('/usuarios', (req, res) => {
   }
 });
 
-// PUT - Atualizar usuário
+// Rota PUT - Atualizar usuário
 app.put('/usuarios/:id', (req, res) => {
   try {
     const id = parseInt(req.params.id);
@@ -68,7 +71,7 @@ app.put('/usuarios/:id', (req, res) => {
   }
 });
 
-// DELETE - Remover usuário
+// Rota DELETE - Remover usuário
 app.delete('/usuarios/:id', (req, res) => {
   try {
     const id = parseInt(req.params.id);
@@ -86,6 +89,7 @@ app.delete('/usuarios/:id', (req, res) => {
   }
 });
 
+// Inicia o servidor
 app.listen(port, () => {
   console.log(`🚀 Aplicação em execução na porta ${port}`);
 });
